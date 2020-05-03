@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+<head>
+    <meta charset="utf-8">
+    <meta name="Language" content="en">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+      <title>
+          Personal Blog
+      </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="Style.css">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
+      <script type="text/javascript" src="home.js"></script>
+  </head>
+  <body>
+    
+  
+<div class="header a">
+    <a href="#default" class="logo">Portfolio</a>
+
+        <div class="header-right">
+        <a class="tablink" onclick="openPage('home',this)" id="defaultOpen">Home</a>
+        <a class="tablink" onclick="openPage('about_me',this)" >About me</a>
+        <a class="tablink" onclick="openPage('contact_me',this)">Contact me </a>
+        <a class="tablink" onclick="openPage('gallery',this)">Gallery</a>
+    </div>
+</div>
+
+<!--home section-->
+ <div id="home" class="tabcontent">     
+  <div style="padding-left:20px">
+    <h1>Welcome To My Home Page</h1>
+    <h3 style="color: #696969" data-wow-delay="0.2s">"Tell me and I forget. Teach me and I remember.<br> Involve me and I learn"<h6>-Benjamin Franklin</h6> </h3>
+  </div>
+ </div>
+<!--about me section-->
+
+<div>
+ <div id="about_me" class="tabcontent">
+<header class='masthead'>
+  <p class='masthead-intro'>Hi I'm</p>
+  <h1 class='masthead-heading'>Sunandini!</h1>
+</header>
+<section class="introduction-section">
+    <h1>Introduction</h1>
+    <p>I am an Intern at ZeMoSo Technologies.</p>
+    <p>I love the internet, technology, nature and building beautiful applications.</p>
+</section>
+<section class="location-section">
+    <h2>Where I'm From</h2>
+    <p>I'm from Hyderabad, India. </p>
+</section>
+<section class="questions-section">
+    <h1>More About Me</h1>
+    <h2>What are your Technical skills and abilities?</h2>
+    <p>I am flexible in coding languages C,C++,Java and currently learning Kotlin. Apart from these I work on the Spring framework, React and  other Full Stack Technologies.</p>
+    <p> I am certified in CCNA, DELL EMC and one among the final participatns of GEEK GODESS 2019, FORD GME Hackathon.</p> 
+    <h2>What's your dream job?</h2>
+    <p>My dream job is similar to my current job except I would like to be building a new software instead of projects on existing one's.</p>
+    <h2>What are your hobbies?</h2>
+    <p>I love to dance and solve puzzles however Sudoku is my favourite. I also play several games like Clash of Clans,4 pics one word,etc.  </p>
+    <h2>Why do you want to be a Software Developer or why did you choose this field?</h2>
+    <p>Because programming is awesome. I want to produce solutions for modern days problems through software and technology.</p>
+</section>
+
+<footer class="content-footer">
+    <p>Say hi to me on these social networks:</p>
+    <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/sunandiniM1509" target="_blank">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://www.linkedin.com/in/sunandini-medisetti-58791b169/" target="_blank">LinkedIn</a></li>
+        <li><a class="css-is-deranged" href="https://www.hackerrank.com/Sun1ndini" target="_blank">Hackerrank</a></li>
+    </ul>
+</footer>
+</div>
+ <div id="contact_me" class="tabcontent">
+        <h2>Subscribe To My Mailing List</h2>
+        <div class="container">
+            <form onsubmit="alertFunction(yourName,emailAddress)">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="yourName" placeholder="Your name" required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="emailAddress" placeholder="Your email details" required>
+         <input type="submit" value="Subscribe">
+        </div>
+
+        <h2>Get in Touch</h2>
+          <div class="container">
+          <form onsubmit="alertFunction(emailAddress)">
+               <label for="email">Email</label>
+                <input type="text" id="email" name="emailAddress" placeholder="Your email details" >
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Message here" style="height:200px"></textarea>
+
+                <input type="submit" value="Send">
+           </div>
+            </form>
+        </div>
+    </div>
+    <div id="gallery" class="tabcontent">
+            <img class="mySlides" src="work.jpg" style="width:100%">
+  <img class="mySlides" src="pro.jpeg" style="width:100%">
+  <img class="mySlides" src="casual.jpeg" style="width:100%">
+  <img class="mySlides" src="always.jpg" style="width:100%">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+    </div>
+    <script>document.getElementById("defaultOpen").click();</script>
+  </body>
+</html>
+</body>
+</html>
